@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    android:padding="0dp">
+
+    <!-- App Title with more padding and modern color -->
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coin Toss 🪙"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="52dp"/>
+
+    <!-- CardView for a shadowed circular coin image -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/coin_card"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        app:cardCornerRadius="130dp"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/app_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/coin_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/heads"
+            android:contentDescription="Coin Side"
+            android:scaleType="fitCenter"
+            android:padding="36dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Result Text: Heads or Tails -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#424242"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/coin_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Toss Button with a modern look -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toss_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Toss Coin"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        app:cornerRadius="32dp"
+        android:elevation="10dp"
+        app:strokeColor="#1565C0"
+        app:strokeWidth="2dp"
+        android:backgroundTint="#1976D2"
+        app:iconPadding="12dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/result_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
